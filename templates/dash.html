@@ -27,11 +27,16 @@
         </form>
 
         <!-- Display Data -->
-        <div id=" dataContainer" class="col-md-4">
+        <!-- Display Data -->
+        <div id="dataContainer" class="col-md-4">
             <h5>{{ specific_state_object.state }}</h5>
             <p>Positive Cases: {{ specific_state_object.positive }}</p>
-            <p>positive Tests: {{ specific_state_object.positiveTestsViral }}</p>
+            <p>Positive Tests: {{ specific_state_object.positiveTestsViral }}</p>
+            {% if plot %}
+            <img src="data:image/png;base64,{{ plot }}" alt="Positive Cases Over Time">
+            {% endif %}
         </div>
+
     </div>
 
 
